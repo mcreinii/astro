@@ -15,14 +15,8 @@ return {
         },
         mappings = {
             n = {
-                ["<Leader>c"] = {
-                    function()
-                        local bufs = vim.fn.getbufinfo { buflisted = true }
-                        require("astrocore.buffer").close(0)
-                        if not bufs[2] then require("snacks").dashboard() end
-                    end,
-                    desc = "Close buffer",
-                },
+                ["<C-d>"] = { "<C-d>zz", desc = "Scroll Down (View Center)" },
+                ["<C-u>"] = { "<C-u>zz", desc = "Scroll Up (View Center)" },
             },
         },
     },
